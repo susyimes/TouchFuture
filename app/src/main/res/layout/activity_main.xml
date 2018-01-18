@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.susyimes.funbox.touchfuture.MainActivity">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="1st day num"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="2nd day num"
+        app:layout_constraintTop_toBottomOf="@+id/et1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="3rd day num"
+        app:layout_constraintTop_toBottomOf="@+id/et2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="4th day num"
+        app:layout_constraintTop_toBottomOf="@+id/et3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="5th day num"
+        app:layout_constraintTop_toBottomOf="@+id/et4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="6th day num"
+        app:layout_constraintTop_toBottomOf="@+id/et5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_margin="10dp"
+        android:id="@+id/et7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="7th day num"
+        app:layout_constraintTop_toBottomOf="@+id/et6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.v7.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@+id/et7"
+        android:id="@+id/compute_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="compute"
+        android:layout_margin="30dp"
+        />
+    <TextView
+
+        android:id="@+id/text_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This num is LinearRegression future num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="50dp"
+        />
+    <TextView
+
+        android:id="@+id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="30dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
+</layout>
