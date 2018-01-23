@@ -3,8 +3,10 @@ package com.susyimes.funbox.touchfuture.utils;
 /**
  * Created by Susyimes on 2018/1/18.
  */
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
+
 public class RegressionLine // implements Evaluatable
 {
     /** sum of x */

@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="1st day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="2nd day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -38,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="3rd day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -48,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="4th day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -58,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="5th day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -68,6 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="6th day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -78,17 +84,31 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="7th day num"
+        android:inputType="number|numberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/et6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
+
     <android.support.v7.widget.AppCompatButton
         app:layout_constraintTop_toBottomOf="@+id/et7"
         android:id="@+id/compute_btn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="compute"
-        android:layout_margin="30dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <android.support.v7.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@+id/compute_btn"
+        android:id="@+id/clean_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="clean"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         />
     <TextView
 
