@@ -8,12 +8,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.susyimes.funbox.network.CleanRetrofit;
+import com.susyimes.funbox.network.Retrofits;
 import com.susyimes.funbox.touchfuture.databinding.ActivityMainBinding;
 import com.susyimes.funbox.touchfuture.utils.DataPoint;
 import com.susyimes.funbox.touchfuture.utils.RegressionLine;
 
+import org.reactivestreams.Subscription;
+
 import java.util.ArrayList;
 import java.util.List;
+
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Action;
+import io.reactivex.functions.Consumer;
 
 public class MainActivity extends AppCompatActivity {
     private List<Float> list;
@@ -33,10 +42,33 @@ public class MainActivity extends AppCompatActivity {
 
         initAction();
 
+        initNetWork();
+
+    }
+
+    private void initNetWork() {
+        Log.d("feee","xxx1");
+        Retrofits.getService(this).base("btcusdt","1day").doOnNext(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                Log.d("feee",s+"xxx");
+            }
+        }).observeOn(AndroidSchedulers.mainThread()).doFinally(new Action() {
+            @Override
+            public void run() throws Exception {
+                Log.d("feee","xxx2");
+            }
+        }).subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                Log.d("feee",s+"xxx");
+            }
+        });
+
     }
 
     private void result() {
-
+        initNetWork();
         allequals=true;
         RegressionLine line = new RegressionLine();
 
