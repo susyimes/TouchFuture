@@ -1,5 +1,7 @@
 package com.susyimes.funbox.touchfuture;
 
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.app.AppCompatActivity;
@@ -75,8 +77,8 @@ public class AutoActivity extends AppCompatActivity {
 
         System.out.println("\n回归线公式:  y = " + linehigh.getA1() + "x + "
                 + linehigh.getA0());
-        System.out.println("误差：     R^2 = " + linehigh.getR());
-
+        //System.out.println("误差：     R^2 = " + linehigh.getR());
+        String devationhigh=linehigh.getR()+"";
         float resultnumhigh=(linehigh.getA1()*(monCoinDatas.size()))+linehigh.getA0();
 
 
@@ -91,11 +93,18 @@ public class AutoActivity extends AppCompatActivity {
 
         System.out.println("\n回归线公式:  y = " + linelow.getA1() + "x + "
                 + linelow.getA0());
-        System.out.println("误差：     R^2 = " + linelow.getR());
+        //System.out.println("误差：     R^2 = " + linelow.getR());
+        String devationlow=linelow.getR()+"";
 
         float resultnumlow=(linelow.getA1()*(monCoinDatas.size()))+linelow.getA0();
 
-        binding.monthNum.setText("MonthDay: close:"+resultnumlow+" open:"+resultnumhigh);
+        binding.monthNum.setText("MonthDay: "+" open: "+resultnumhigh+" deviation："+devationlow+"     close: "+resultnumlow +" deviation："+devationhigh);
+
+        ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        // 将文本内容放到系统剪贴板里。
+        cm.setText(binding.monthNum.getText());
+
+
 
     }
 
@@ -135,7 +144,7 @@ public class AutoActivity extends AppCompatActivity {
 
         float resultnumlow=(linelow.getA1()*(sevCoinDatas.size()))+linelow.getA0();
 
-        binding.sevendayNum.setText("SevenDay: low:"+resultnumlow+" high:"+resultnumhigh);
+        //binding.sevendayNum.setText("SevenDay: low:"+resultnumlow+" high:"+resultnumhigh);
 
     }
 
