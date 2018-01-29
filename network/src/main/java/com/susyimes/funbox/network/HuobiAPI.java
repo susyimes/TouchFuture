@@ -11,5 +11,5 @@ import retrofit2.http.Query;
 
 public interface HuobiAPI {
     @GET("/market/history/kline")
-    Flowable<String> base(@Query("symbol") String symbol,@Query("period") String period);
+    Flowable<HuobiBaseBean> base(@Query("symbol") String symbol,@Query("period") String period);
 }

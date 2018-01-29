@@ -1,5 +1,6 @@
 package com.susyimes.funbox.touchfuture;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+
         list=new ArrayList<>();
 
         //result();
@@ -46,24 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void initNetWork() {
-        Log.d("feee","xxx1");
-        Retrofits.getService(this).base("btcusdt","1day").doOnNext(new Consumer<String>() {
-            @Override
-            public void accept(String s) throws Exception {
-                Log.d("feee",s+"xxx");
-            }
-        }).observeOn(AndroidSchedulers.mainThread()).doFinally(new Action() {
-            @Override
-            public void run() throws Exception {
-                Log.d("feee","xxx2");
-            }
-        }).subscribe(new Consumer<String>() {
-            @Override
-            public void accept(String s) throws Exception {
-                Log.d("feee",s+"xxx");
-            }
-        });
+
 
     }
 
@@ -71,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
         initNetWork();
         allequals=true;
         RegressionLine line = new RegressionLine();
-
-
 
         for (int i=0;i<list.size();i++){
             if (i>=1){
@@ -150,6 +135,15 @@ public class MainActivity extends AppCompatActivity {
                 list.clear();
             }
         });
+
+        binding.goAuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,AutoActivity.class));
+            }
+        });
+
+
 
 
 
