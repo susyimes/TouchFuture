@@ -39,7 +39,7 @@ public class CleanRetrofit {
     private final static int CACHE_SIZE_BYTES = 1024 * 1024 * 2;
 
 
-    public static String ENDPOINT = "https://api.huobi.pro";
+    public static String ENDPOINT = "https://api.huobi.pro/market/";
 
 
     private Context mContext;
